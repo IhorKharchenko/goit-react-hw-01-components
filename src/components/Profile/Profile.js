@@ -1,11 +1,12 @@
 import PropTypes from 'prop-types';
-const Stats = ({ text, stat }) => {
-  return (
-    <li>
-      <span>{text}</span> <span>{stat}</span>
-    </li>
-  );
-};
+import { Stats } from '../Stats/Stats';
+// const Stats = ({ text, stat }) => {
+//   return (
+//     <li>
+//       <span>{text}</span> <span>{stat}</span>
+//     </li>
+//   );
+// };
 export const Profile = ({
   username,
   tag,
@@ -22,9 +23,9 @@ export const Profile = ({
         <p>{location}</p>
       </div>
       <ul>
-        <Stats text={'followers'} stat={`${followers}`} />
-        <Stats text={'views'} stat={`${views}`} />
-        <Stats text={'likes'} stat={`${likes}`} />
+        <Stats text={'followers'} stat={followers} />
+        <Stats text={'views'} stat={views} />
+        <Stats text={'likes'} stat={likes} />
       </ul>
     </div>
   );
