@@ -7,6 +7,7 @@ import { Stats } from '../Stats/Stats';
 //     </li>
 //   );
 // };
+
 export const Profile = ({
   username,
   tag,
