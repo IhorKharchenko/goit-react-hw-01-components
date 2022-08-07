@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
+import { StyledListItem, StyledStat, StyledText } from './Stats.styled';
 export const Stats = ({ text, stat }) => {
   return (
-    <li>
-      <span>{text}</span>
-      <span>{stat}</span>
-    </li>
+    <StyledListItem>
+      <StyledText>{text}</StyledText>
+      <StyledStat>{stat}</StyledStat>
+    </StyledListItem>
   );
 };
 Stats.propTypes = {

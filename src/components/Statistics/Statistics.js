@@ -1,5 +1,6 @@
 import { Stats } from '../Stats/Stats';
 import PropTypes from 'prop-types';
+import { StyledList, StyledSection, StyledTitle } from './Statistics.styled';
 // const Stats = ({ label, percentage }) => {
 //   return (
 //     <li>
@@ -9,14 +10,14 @@ import PropTypes from 'prop-types';
 // };
 export const Statistics = ({ title, stats }) => {
   return (
-    <section>
-      {title ? <h2>{title}</h2> : null}
-      <ul>
+    <StyledSection>
+      {title ? <StyledTitle>{title}</StyledTitle> : null}
+      <StyledList>
         {stats.map(stat => (
           <Stats key={stat.id} text={stat.label} stat={stat.percentage} />
         ))}
-      </ul>
-    </section>
+      </StyledList>
+    </StyledSection>
   );
 };
 Statistics.propTypes = {

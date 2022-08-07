@@ -1,23 +1,30 @@
+import {
+  StyledRow,
+  StyledColumn,
+  StyledTable,
+  StyledHead,
+} from './TransactionHistory.styled';
+
 export const TransactionHistory = ({ items }) => {
   return (
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Amount</th>
-          <th>Currency</th>
-        </tr>
-      </thead>
+    <StyledTable>
+      <StyledHead>
+        <StyledRow>
+          <StyledColumn>Type</StyledColumn>
+          <StyledColumn>Amount</StyledColumn>
+          <StyledColumn>Currency</StyledColumn>
+        </StyledRow>
+      </StyledHead>
 
       <tbody>
         {items.map(({ id, type, amount, currency }) => (
-          <tr key={id}>
-            <td>{type}</td>
-            <td>{amount}</td>
-            <td>{currency}</td>
-          </tr>
+          <StyledRow key={id}>
+            <StyledColumn>{type}</StyledColumn>
+            <StyledColumn>{amount}</StyledColumn>
+            <StyledColumn>{currency}</StyledColumn>
+          </StyledRow>
         ))}
       </tbody>
-    </table>
+    </StyledTable>
   );
 };

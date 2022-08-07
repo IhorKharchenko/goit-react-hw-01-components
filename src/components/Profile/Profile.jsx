@@ -1,5 +1,6 @@
 import PropTypes from 'prop-types';
 import { Stats } from '../Stats/Stats';
+import { StyledProfile, StyledProfileInfo, StyledName, StyledText, StyledList } from './Profile.styled';
 // const Stats = ({ text, stat }) => {
 //   return (
 //     <li>
@@ -16,19 +17,19 @@ export const Profile = ({
   stats: { followers, views, likes },
 }) => {
   return (
-    <div>
-      <div>
-        <img src={avatar} alt="" />
-        <p>{username}</p>
-        <p>{tag}</p>
-        <p>{location}</p>
-      </div>
-      <ul>
+    <StyledProfile>
+      <StyledProfileInfo>
+        <img src={avatar} alt={`${username}'s avatar`} width={280} />
+        <StyledName>{username}</StyledName>
+        <StyledText>{tag}</StyledText>
+        <StyledText>{location}</StyledText>
+      </StyledProfileInfo>
+      <StyledList>
         <Stats text={'followers'} stat={followers} />
         <Stats text={'views'} stat={views} />
         <Stats text={'likes'} stat={likes} />
-      </ul>
-    </div>
+      </StyledList>
+    </StyledProfile>
   );
 };
 
