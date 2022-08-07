@@ -6,11 +6,11 @@ import { Profile } from '../Profile/Profile';
 import { Statistics } from '../Statistics/Statistics';
 import { FriendList } from '../FriendList/FriendList';
 import { TransactionHistory } from '../TransactionHistory/TransactionHistory';
-import { Container } from './App.styled';
+import { StyledApp } from './App.styled';
 
 export const App = () => {
   return (
-    <Container>
+    <StyledApp>
       {users.map(({ username, tag, location, avatar, stats }) => (
         <Profile
           key={username}
@@ -24,6 +24,6 @@ export const App = () => {
       <Statistics title={'Upload stats'} stats={statisticalData} />
       <FriendList friends={friends} />
       <TransactionHistory items={transactions} />
-    </Container>
+    </StyledApp>
   );
 };

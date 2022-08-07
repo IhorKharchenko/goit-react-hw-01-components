@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
 
-export const Container = styled.div`
-  padding: 20px;
+export const StyledApp = styled.div`
+  padding: ${props => props.theme.space[4]}px;
 `;
