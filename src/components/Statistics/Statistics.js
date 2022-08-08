@@ -11,7 +11,7 @@ import { StyledList, StyledSection, StyledTitle } from './Statistics.styled';
 export const Statistics = ({ title, stats }) => {
   return (
     <StyledSection>
-      {title ? <StyledTitle>{title}</StyledTitle> : null}
+      {title && <StyledTitle>{title}</StyledTitle>}
       <StyledList>
         {stats.map(stat => (
           <Stats key={stat.id} text={stat.label} stat={stat.percentage} />
